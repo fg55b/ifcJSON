@@ -2,8 +2,10 @@ import json
 import os
 from jsonschema import validate, ValidationError, SchemaError
 
+# Getting the relative path of the Schema
 schema_file_path = os.path.join(os.path.abspath('ifcJSON'), 'Schema/IFC4.json')
 
+# Creation of a validation function to be called externally to validate any folder
 def ifcjson_validator(ifcjson_files_folder):
     with open(schema_file_path, "r") as schema_file:
         schema = json.load(schema_file)
