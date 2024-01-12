@@ -1,1 +1,1 @@
-import .ifcecore
+# import .ifcecore
